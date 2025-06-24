@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+
+    <style>
+      /* Universal selector */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Type selector */
+      p {
+        font-size: 16px;
+        margin: 10px 20px 10px 20px;
+        padding: 1px 2px 3px 4px; /* if only 2 value that means combined value of top-bottom right-left*/
+      }
+
+      /* Class selector */
+      .dark {
+        background-color: gray;
+      }
+
+      /* Id selector */
+      #header {
+        background-color: rgb(201, 64, 64);
+      }
+
+      /* attribute selector */
+      input[type="text"] {
+        border: 3px solid darkblue;
+      }
+
+      /*------------------ advance ------------------*/
+
+      /* descendent  selector */
+      article p {
+        font-style: italic;
+        background-color: #1a1a1a;
+        color: white;
+        padding: 10px;
+      }
+
+      /* child  selector */
+      div > p {
+        list-style-type: square;
+        background-color: orange;
+      }
+
+      /* Adjacent sibling selector */
+      h1 + p {
+        font-weight: bold;
+      }
+
+      /* general sibling selector */
+      h1 ~ p {
+        color: red;
+        font-weight: bold;
+      }
+
+      /* pseudo-class selector */
+      a:hover {
+        background-color: #1a1a1a;
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        margin: 5px;
+      }
+      /* pseudo-element selector */
+      p::first-letter {
+        background-color: #1a1a1a;
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        margin: 5px;
+      }
+      /* Group selector */
+
+      p,
+      H2 {
+        background-color: #1a1a1a;
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">This is a header</header>
+    <h1>Main Heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+      consequuntur?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+      consequuntur?
+    </p>
+    <p class="dark">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+      consequuntur?
+    </p>
+    <input type="text" name="" placeholder="Enter text here" id="" />
+
+    <article>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, illo!
+        </p>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+        cupiditate!
+      </p>
+    </article>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia,
+        reprehenderit?
+      </p>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          aliquid.
+        </p>
+      </section>
+      <p>
+        Aliquam nesciunt odio dolorem ipsa animi tempora fugit id temporibus!
+      </p>
+      <p>Cumque error velit aspernatur corporis ipsa quaerat vel ea ut?</p>
+    </div>
+    <h2>Sub heading</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aperiam.</p>
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, eius.
+    </div>
+    <a href="#">hover over me</a>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore
+      accusamus dolor rem nisi quis?
+    </p>
+    <h3>Heading 3</h3>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
+      recusandae natus cumque ipsum unde dolores?
+    </p>
+  </body>
+</html>
