@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Full Demo</title>
+    <style>
+      #parent {
+        padding: 20px;
+        background-color: lightblue;
+        border: 2px solid blue;
+        margin-bottom: 10px;
+      }
+      #child {
+        padding: 15px;
+        background-color: lightcoral;
+        border: 2px solid red;
+        margin-top: 10px;
+      }
+      button {
+        margin: 5px;
+      }
+      input {
+        display: block;
+        margin-top: 10px;
+      }
+      form {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Events Full Demo</h1>
+
+    <!-- Event Bubbling & Capturing -->
+    <div id="parent">
+      Parent Div
+      <div id="child">Child Div</div>
+    </div>
+
+    <!-- Buttons for different event types -->
+    <button id="btnHTML" onclick="htmlClick()">Click Me (HTML onclick)</button>
+    <button id="btnDOM0">Click Me (DOM0 onclick)</button>
+    <button id="btnAddRemove">Click Me (addEventListener)</button>
+
+    <!-- Input field for key/focus/blur events -->
+    <input type="text" id="inputField" placeholder="Type here..." />
+
+    <!-- Form example -->
+    <form id="demoForm">
+      <button type="submit">Submit Form</button>
+    </form>
+
+    <script src="./events.js"></script>
+  </body>
+</html>
