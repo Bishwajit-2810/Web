@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Basics</title>
+  </head>
+  <body>
+    <h1 id="first" style="background-color: grey; color: black">
+      Hello Everyone
+    </h1>
+    <h2 id="second">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, quo.
+    </h2>
+    <ul class="list">
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+    </ul>
+    <script>
+      // alert("welcome")
+      const temp = document.getElementById("first");
+      console.log(document);
+      console.log(document.body.childNodes[3].textContent);
+      window.console.log(temp);
+      temp.innerText = "Hello Bishwajit";
+      temp.style.backgroundColor = "pink";
+
+      const list_item = document.getElementsByTagName("li");
+      console.log(list_item);
+      list_item[0].innerText = "who";
+      list_item[1].innerText = "are";
+      list_item[2].innerText = "you";
+      list_item[2].innerHTML = `<b>${list_item[2].innerText}</b>`;
+      list_item[2].innerHTML = `<i>${list_item[2].innerHTML}</i>`;
+
+      const list = document.getElementsByClassName("list");
+      console.log(list);
+
+      const arr = [...list];
+      console.log(arr[0].children[0].textContent);
+
+      console.log(document.querySelector("li"));
+      console.log(document.querySelector("#first"));
+      console.log(document.querySelector("#second"));
+      console.log(document.querySelector(".list"));
+      console.log(document.querySelectorAll("li"));
+    </script>
+  </body>
+</html>

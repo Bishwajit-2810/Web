@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crud</title>
+  </head>
+  <body style="background-color: black">
+    <h1>This is a Basic title</h1>
+    <ul id="list" style="color: white">
+      <li>bread</li>
+      <li>banana</li>
+      <li>milk</li>
+    </ul>
+
+    <ul id="list_of_brands" style="color: white"></ul>
+    <ul id="list_of_brands2" style="color: white"></ul>
+  </body>
+  <script>
+    const title = document.querySelector("h1");
+    title.style.color = "white";
+
+    //adding element before and after
+    // creating new element
+    const newElement = document.createElement("h2");
+    newElement.textContent = "this is the new element";
+    newElement.id = "newElement";
+    // adding new element after the h1
+    title.before(newElement);
+    title.after(newElement);
+    newElement.style.color = "white";
+
+    // creating new element
+    const newElement2 = document.createElement("h3");
+    newElement2.textContent = "this is the new era of elements";
+    newElement2.className = "newElement";
+
+    // adding new element after the h1
+    newElement2.className += " eraElement";
+    newElement2.classList.add("test1");
+    newElement2.classList.add("test2");
+    newElement2.classList.remove("test2");
+    title.before(newElement2);
+    console.log(newElement2);
+    console.log(newElement2.getAttribute("class"));
+    newElement2.setAttribute("id", "element2");
+    console.log(newElement2.getAttribute("id"));
+    newElement2.style.color = "white";
+
+    // adding element in a list
+    const ulElement = document.getElementById("list");
+    const li1 = document.createElement("li");
+    li1.style.color = "white";
+    li1.textContent = "sugar";
+    ulElement.append(li1);
+    const li2 = document.createElement("li");
+    li2.style.color = "white";
+    li2.textContent = "ice";
+    ulElement.append(li2);
+    const li3 = document.createElement("li");
+    li3.style.color = "white";
+    li3.textContent = "chocolate";
+    ulElement.append(li3);
+    const li4 = document.createElement("li");
+    li4.style.color = "white";
+    li4.textContent = "barry";
+    ulElement.append(li4);
+
+    // fragments for better optimized ui loading
+    const brands = document.getElementById("list_of_brands");
+    const list_brand = ["apple", "samsung", "vivo", "philips"];
+
+    const fragment = document.createDocumentFragment();
+
+    for (let brand of list_brand) {
+      const list_item = document.createElement("li");
+      list_item.textContent = brand;
+      fragment.append(list_item);
+    }
+    brands.append(fragment);
+
+    // without fragments for better optimized ui loading
+    const brands2 = document.getElementById("list_of_brands2");
+    const list_brand2 = ["apple", "samsung", "vivo", "philips"];
+
+    const fragment2 = [];
+
+    for (let brand of list_brand) {
+      const list_item = document.createElement("li");
+      list_item.textContent = brand;
+      fragment2.push(list_item);
+    }
+    for (let item of fragment2) {
+      brands2.append(item);
+    }
+    brands2.remove();
+
+    // avoid innerHtml as much as possible specially when data is form user input
+    // afterend beforeend
+    const item = document.createElement("li");
+    item.textContent = "help";
+    // item.innerHTML = "<h1>help</h1>";
+    item.style.color = "white";
+    brands.insertAdjacentElement("afterend", item);
+  </script>
+</html>
