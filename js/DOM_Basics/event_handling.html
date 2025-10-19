@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <h1 id="hello">Hello EveryOne</h1>
+    <div id="container">
+      <div id="1" style="background-color: orange; width: 100px">child 1</div>
+      <div id="2" style="background-color: green; width: 100px">child 2</div>
+      <div id="3" style="background-color: orange; width: 100px">child 3</div>
+      <div id="4" style="background-color: green; width: 100px">child 4</div>
+      <div id="5" style="background-color: orange; width: 100px">child 5</div>
+      <div id="6" style="background-color: green; width: 100px">child 6</div>
+    </div>
+  </body>
+  <script>
+    const hello = document.getElementById("hello");
+    hello.addEventListener("click", () => {
+      hello.textContent = "Hello Bishwajit";
+    });
+    hello.addEventListener("dblclick", () => {
+      hello.textContent = "Hello again";
+      hello.style.color = "red";
+    });
+
+    //not an optimized way to do this
+    const container = document.getElementById("container");
+    function handle(e) {
+      e.target.textContent = "hello";
+    }
+    console.log(container.children);
+    for (let child of container.children) {
+      child.addEventListener("click", handle);
+      console.log("event listener added");
+      child.removeEventListener("click", handle);
+    }
+  </script>
+</html>
