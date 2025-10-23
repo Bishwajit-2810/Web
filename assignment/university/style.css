@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #181818;
+  color: #e8e8e8;
+  line-height: 1.6;
+  padding: 20px 0;
+}
+
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #232323;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  color: #b3a7f2;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.course-tagline {
+  font-size: 1.3rem;
+  color: #d0d0d0;
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #b3a7f2;
+  font-weight: 600;
+  margin-bottom: 18px;
+  border-bottom: 3px solid #b3a7f2;
+  padding-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.course-description p {
+  font-size: 1.1rem;
+  color: #d0d0d0;
+  margin-bottom: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background-color: #2b2b2b;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 18px;
+  text-align: left;
+  border: 1px solid #444;
+}
+
+th {
+  background-color: #6200ee;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  background-color: #333333;
+  color: #e8e8e8;
+}
+
+a {
+  color: #b3a7f2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #03dac6;
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 30px;
+}
+
+ul li {
+  background-color: #333333;
+  margin: 12px 0;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #444444;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .course-tagline {
+    font-size: 1.1rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
