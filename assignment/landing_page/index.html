@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Resume - Bishwajit Chakraborty</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bishwajit Chakraborty</h1>
+      <p>Computer Science Student | Web Developer | Tech Enthusiast</p>
+    </header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+          <img
+            src="profile.jpeg"
+            alt="Bishwajit Chakraborty's Image"
+            style="width: 200px"
+          />
+          <p>
+            I am a computer science student from Bangladesh with a strong
+            interest in web development and design. I love building creative,
+            user-friendly websites that solve real problems.
+          </p>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <table>
+          <tr>
+            <th>Degree</th>
+            <th>Institution</th>
+            <th>Year</th>
+          </tr>
+          <tr>
+            <td>B.Sc. in CSE</td>
+            <td>Daffodil International University</td>
+            <td>2022 - Present</td>
+          </tr>
+          <tr>
+            <td>HSC</td>
+            <td>Gurudayal Govt. College</td>
+            <td>2021</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">HTML, CSS, JavaScript</div>
+          <div class="skill">Python, PHP</div>
+          <div class="skill">MySQL, Database</div>
+          <div class="skill">UI/UX Design</div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <strong>Smart Shop:</strong> E-commerce site using PHP & MySQL
+          </li>
+          <li>
+            <strong>BusEase:</strong> Bus ticket booking web app using
+            JavaScript
+          </li>
+          <li>
+            <strong>AI Chatbot:</strong> A chatbot integrated with machine
+            learning algorithms, built using Python and Flask for customer
+            support automation.
+          </li>
+          <li>
+            <strong>Portfolio Website:</strong> A personal portfolio website
+            with interactive features and animations using HTML, CSS,
+            JavaScript, and React.
+          </li>
+          <li>
+            <strong>Weather Dashboard:</strong> A dynamic weather dashboard that
+            fetches real-time data from an API and displays weather forecasts
+            using JavaScript and Bootstrap.
+          </li>
+          <li>
+            <strong>Real-time Chat Application:</strong> A real-time chat
+            application with WebSockets for instant messaging, built with
+            Node.js and Socket.IO.
+          </li>
+          <li>
+            <strong>Task Management App:</strong> A task management application
+            built with React, Node.js, and MongoDB, allowing users to create,
+            update, and track tasks efficiently.
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            placeholder="Write your message"
+            required
+          ></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Bishwajit Chakraborty | All rights Reserved</p>
+    </footer>
+  </body>
+</html>
