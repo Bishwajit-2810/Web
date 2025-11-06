@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1,
+h2 {
+  color: #2c3e50;
+}
+
+.container {
+  border: 2px solid #3498db;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+}
+
+.abs-container {
+  position: relative;
+  height: 200px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #a1d8b1;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.relative-box {
+  position: relative;
+  top: 20px;
+  left: 30px;
+  background-color: #e67e22;
+}
+
+.absolute-box {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: #f1c40f;
+  color: #333;
+}
+
+.sticky-box {
+  position: sticky;
+  top: 20px; /* Distance from top of viewport when sticky */
+  background-color: #9b59b6;
+  z-index: 1;
+}
+
+.fixed-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3498db;
+}
+
+.relative-section,
+.absolute-section,
+.sticky-section,
+.fixed-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+}
+
+.scroll-content {
+  height: 800px;
+  padding: 20px;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.sticky-section .scroll-content {
+  height: 400px;
+}
