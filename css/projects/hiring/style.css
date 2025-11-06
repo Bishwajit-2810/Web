@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main-container {
+  padding: 14px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first {
+  color: #8b56d9;
+  font-weight: bold;
+}
+
+.button-parent {
+  padding: 30px;
+}
+
+.meet {
+  color: #101828;
+  padding-bottom: 10px;
+  /* padding-top: 5px; */
+}
+.intro {
+  max-width: 600px;
+  width: 75%;
+  color: #667085;
+  text-align: center;
+}
+.btn1 {
+  padding: 10px 20px;
+  border: 2px solid #d0d5dd;
+  border-radius: 5px;
+  background-color: white;
+}
+.btn2 {
+  padding: 10px 20px;
+  border: 2px solid #7f56d9;
+  border-radius: 5px;
+  background-color: #7f56d9;
+  color: white;
+}
+.card {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 260px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #f9fafb;
+  border: 1.5px solid #98a2b3;
+  transition: 0.2s ease;
+  justify-content: space-evenly;
+}
+.card:hover {
+  background-color: #7f56d9;
+  color: #fff;
+}
+
+.intro2 {
+  max-width: 70%;
+  width: 100%;
+  font-size: 0.875rem;
+  color: #667085;
+  text-align: center;
+}
+
+.card:hover .intro2 {
+  color: #fff;
+}
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: bold;
+  font-size: large;
+}
+.position {
+  margin-top: -50px;
+  color: #8b56d9;
+  font-size: 14px;
+}
+.card:hover .position {
+  color: #fff;
+}
+
+.social-links {
+  width: 33%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+a {
+  color: #667085;
+}
+
+.card:hover a {
+  color: white;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
