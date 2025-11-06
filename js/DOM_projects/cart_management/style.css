@@ -1,0 +1,217 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --radius: 12px;
+  --gap: 16px;
+  --max-width: 980px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(180deg, var(--bg), #eef2f7);
+  color: #111827;
+  padding: 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+#container {
+  width: 100%;
+  max-width: var(--max-width);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 880px) {
+  #container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+h1 {
+  margin: 0 0 12px 0;
+  font-size: 1.6rem;
+}
+
+h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+
+#product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.product {
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(17, 24, 39, 0.04);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+.product span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.product button {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  padding: 8px 10px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  cursor: pointer;
+}
+
+.product button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+}
+
+.product button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
+}
+
+#cart-items {
+  min-height: 140px;
+  background: linear-gradient(180deg, #fbfdff, #ffffff);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(17, 24, 39, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
+  max-height: 420px;
+  justify-content: center;
+  align-items: center;
+}
+
+#empty-cart {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+  background: rgba(37, 99, 235, 0.03);
+  border-radius: 8px;
+  border: 1px dashed rgba(37, 99, 235, 0.2);
+}
+
+#cart-items > div {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37, 99, 235, 0.04);
+  font-weight: 600;
+}
+
+#cart-items > div button {
+  background: transparent;
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.2);
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+
+#cart-items > div button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(244, 67, 54, 0.08);
+}
+
+#cart-items > div button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.5);
+}
+
+#cart-total {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(17, 24, 39, 0.04);
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+}
+
+#cart-total p {
+  margin: 0;
+  font-weight: 700;
+}
+
+#total-price {
+  font-weight: 800;
+  color: #0b1220;
+}
+
+#checkout-btn {
+  background: linear-gradient(180deg, var(--accent), #1e40af);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  min-width: 110px;
+}
+
+#checkout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(14, 42, 121, 0.14);
+}
+
+#checkout-btn:active {
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none !important;
+}
