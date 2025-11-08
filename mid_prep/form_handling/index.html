@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Handling</title>
+    <style>
+      html,
+      body {
+        background-color: black;
+        color: white;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      input {
+        padding: 8px;
+        border-radius: 6px;
+        background-color: #222;
+        border: 1px solid #333;
+        color: white;
+        outline: none;
+      }
+
+      button {
+        padding: 10px 5px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #333;
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 80px;
+        align-self: center;
+      }
+
+      button:hover {
+        background-color: #222;
+      }
+
+      .message {
+        margin-top: 20px;
+        font-size: 16px;
+        color: lightgreen;
+      }
+
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="userForm">
+      <label for="username">
+        Username:
+        <input id="username" type="text" placeholder="Enter your name" />
+      </label>
+
+      <label for="email">
+        Email:
+        <input id="email" type="email" placeholder="Enter your email" />
+      </label>
+
+      <label for="password">
+        Password:
+        <input id="password" type="password" placeholder="Enter password" />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div class="message"></div>
+
+    <script>
+      const form = document.getElementById("userForm");
+      // const message = document.getElementsByClassName("message")[0];
+      const message = document.querySelector(".message");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (!username || !email || !password) {
+          showMessage("❌ Please fill all fields!", "error");
+          return;
+        }
+
+        const minLength = 8;
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+        if (password.length < minLength) {
+          showMessage(
+            "❌ Password must be at least 8 characters long.",
+            "error"
+          );
+          return;
+        }
+        if (!hasUpperCase) {
+          showMessage(
+            "❌ Password must contain at least one uppercase letter.",
+            "error"
+          );
+          return;
+        }
+        if (!hasLowerCase) {
+          showMessage(
+            "❌ Password must contain at least one lowercase letter.",
+            "error"
+          );
+          return;
+        }
+        if (!hasNumber) {
+          showMessage("❌ Password must contain at least one number.", "error");
+          return;
+        }
+        if (!hasSpecialChar) {
+          showMessage(
+            "❌ Password must contain at least one special character.",
+            "error"
+          );
+          return;
+        }
+
+        // if everything is valid
+        showMessage(
+          `✅ Hello, ${username}! Your form has been submitted successfully.`,
+          "success"
+        );
+
+        console.log("Form Data:");
+        console.log("Username:", username);
+        console.log("Email:", email);
+        console.log("Password:", password);
+
+        form.reset();
+      });
+
+      function showMessage(text, type = "success") {
+        message.classList.add(type);
+        message.textContent = text;
+      }
+    </script>
+  </body>
+</html>
