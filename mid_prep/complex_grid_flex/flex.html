@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Layout Structure</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 90%;
+        border: 2px solid white;
+      }
+
+      .row {
+        display: flex;
+        flex: 1;
+      }
+
+      .box {
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+      }
+
+      /* Top Section (a, b, c, d) */
+      .top {
+        display: flex;
+        flex: 2;
+      }
+      .a,
+      .b,
+      .c,
+      .d {
+        flex: 1;
+      }
+
+      /* Middle Section (e, f, g, h, i) */
+      .mid1 {
+        display: flex;
+        flex: 2;
+      }
+      .e {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .efg-right {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+      }
+      .f,
+      .g {
+        flex: 1;
+      }
+
+      .mid2 {
+        display: flex;
+        flex: 1;
+      }
+      .h {
+        flex: 1;
+      }
+      .i {
+        flex: 3;
+      }
+
+      /* Bottom Section (j, k, l, m, n) */
+      .bottom {
+        display: flex;
+        flex: 3;
+      }
+      .j {
+        flex: 1;
+      }
+      .right-bottom {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .top-right-bottom {
+        display: flex;
+        flex: 2;
+      }
+      .k {
+        flex: 1;
+      }
+      .lm-group {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+      }
+      .l,
+      .m {
+        flex: 1;
+      }
+
+      .n {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Top Row -->
+      <div class="top">
+        <div class="box a">a</div>
+        <div class="box b">b</div>
+        <div class="box c">c</div>
+        <div class="box d">d</div>
+      </div>
+
+      <!-- Middle Section -->
+      <div class="mid1">
+        <div class="box e">e</div>
+        <div class="efg-right">
+          <div class="box f">f</div>
+          <div class="box g">g</div>
+        </div>
+      </div>
+
+      <div class="mid2">
+        <div class="box h">h</div>
+        <div class="box i">i</div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="bottom">
+        <div class="box j">j</div>
+        <div class="right-bottom">
+          <div class="top-right-bottom">
+            <div class="box k">k</div>
+            <div class="lm-group">
+              <div class="box l">l</div>
+              <div class="box m">m</div>
+            </div>
+          </div>
+          <div class="box n">n</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
