@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Practice</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      table {
+        border-collapse: collapse;
+        border: 2px solid white;
+        text-align: center;
+      }
+
+      td {
+        border: 1px solid white;
+        font-size: 18px;
+        padding: 10px;
+      }
+      td[colspan="2"] {
+        width: 140px;
+      }
+      td[rowspan="2"] {
+        height: 80px;
+      }
+
+      caption {
+        caption-side: top;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #00ffcc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <caption>
+        Practice Table
+      </caption>
+      <tr>
+        <td rowspan="2" colspan="2">A</td>
+        <td rowspan="2">B</td>
+        <td rowspan="2">C</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td>D</td>
+        <td>E</td>
+        <td colspan="2">F</td>
+      </tr>
+      <tr>
+        <td colspan="2">G</td>
+        <td>H</td>
+        <td>I</td>
+      </tr>
+    </table>
+  </body>
+</html>
