@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+button {
+  background: #28a745;
+  color: white;
+  border: none;
+}
+
+.error {
+  color: red;
+}
